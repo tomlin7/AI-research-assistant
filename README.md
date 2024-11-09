@@ -1,50 +1,38 @@
-# Semantic Document Search System with pgvector & [pgai](https://github.com/timescale/pgai)
+# AI Research Assistant with Semantic Document Search System
 
 *This is a submission for the [Open Source AI Challenge with pgai and Ollama](https://dev.to/challenges/pgai)*
 
 ## What I Built
 
-This is a semantic document search for smart document storage and retrieval using natural language queries. You can use natural language to fetch data stored in the PostgreSQL database. It uses pgvector for vector similarity search, pgai through TimescaleDB for AI features.
+This is an AI based research assistant with a semantic document search system for smart document storage and retrieval using natural language queries. [**Ollama**](https://ollama.com/) is integrated into the assistant to summarise, and generate sentiment analysis, key points, related topics for provided content. [Streamlit](https://streamlit.io/) is used to provide a minimalistic user interface.
+
+You can use natural language to search data stored in the PostgreSQL database. Uses **pgvector** for vector similarity search, [**pgai**](https://github.com/timescale/pgai) through **TimescaleDB** for search AI features. It is very helpful in cases where you have to manage and search through large collections of documents based on meaning rather than just keywords.
 
 **Key Features:**
-- Semantic search capability using document embeddings
-- AI capabilities powered by [pgai](https://github.com/timescale/pgai)
+- Uses Ollama to summarise docs, and generate sentiment analysis, key points, and related topics
+- Semantic search capability using document embeddings, powered by pgai
+- Batch document processing (directly upload CSV files)
 - User-friendly interface built with Streamlit
 - Document addition and indexing from GUI
-- Batch document processing (directly upload CSV files)
 - Rich metadata support for categorization
 - Simple table view and a detailed view for data
-- Scalable vector search using pgvector's IVFFlat indexing
+- Scalable vector search using both pgvector's IVFFlat indexing and the [**pgvectorscale**](https://github.com/timescale/pgvectorscale) extension
 
-In cases where you have to manage and search through large collections of documents based on meaning rather than just keywords, this tool is very helpful. Particularly useful for knowledge bases, content management systems, etc.
+Although initially the idea was to develop a semantic document search system, later on I decided to extend this to an AI research assistant featuring the same document search system along with Ollama integration.
 
-### Demo
-Demo website hosted in Streamlit community cloud, [**visit here**](https://semantic-document-search.streamlit.app)
+## Demo
 
-![image](https://github.com/user-attachments/assets/ecad7f26-ac7c-4aff-8a2e-d6ad44ba406a)
+Because of problems with hosting Ollama along with the assistant app, only the semantic document search tool demo is hosted.
+- Thanks to Streamlit community cloud, [**visit the demo**](https://semantic-document-search.streamlit.app) ⭐
 
-### Features Showcase:
+![assistant](https://github.com/user-attachments/assets/c58ff3ae-b122-466b-a088-c9e31b80b60f)
 
-1. **Document Addition**
-   - Simple form on nav bar for document addition
-   - Support for metadata: category, difficulty level
-   - Real-time embedding generation and storage
+![document search tool](https://github.com/user-attachments/assets/ecad7f26-ac7c-4aff-8a2e-d6ad44ba406a)
 
-2. **Semantic Search**
-   - Natural language query support, no need to write sql queries!
-   - Similarity scores for search results
-   - Configurable number of results
-   - Expandable result cards (see content and metadata)
+## Tools Used
 
-3. **Document Management**
-   - Dual view options: Table and Detailed view
-   - Chronological organization
-   - Rich metadata display
-   - Clean, intuitive interface
-
-### Tools Used
-
-#### PostgreSQL + pgvector + pgai + Streamlit
+### Ollama + pgvector + pgai + Streamlit
+- [**Ollama**](https://ollama.com/) is integrated into the assistant to summarise, and generate sentiment analysis, key points, related topics for provided content. 
 - [TimescaleDB](https://www.timescale.com/) (PostgreSQL) for primary database (can be configured for self hosted psql as well)
 - [pgvector](https://github.com/pgvector/pgvector) for efficient vector similarity search
 - [pgai](https://github.com/timescale/pgai) through TimescaleDB for AI
@@ -92,7 +80,12 @@ Demo website hosted in Streamlit community cloud, [**visit here**](https://seman
    poetry install && poetry shell
    ```
 
-4. **Run the Application**
+4. **Run the Assistant**
+   ```bash
+   cd src
+   streamlit run assistant.py
+   ```
+   **Run the Document Search Tool**
    ```bash
    cd src
    streamlit run main.py
@@ -136,7 +129,7 @@ Demo website hosted in Streamlit community cloud, [**visit here**](https://seman
 
 ## Final Thoughts
 
-This project is about integrating AI vector search features with traditional databases (which are hard to get used to). This is a very helpful tool for content management systems where you need to manage and search through large collections of documents. Integration of pgvector and pgai provides a great solution along with Streamlit for simple and user-friendly interfaces.
+This project is about integrating AI vector search features with traditional databases (which are hard to get used to). The same tool is used to create an AI research assistant with Ollama integration. This is a very helpful tool for content management systems where you need to manage and search through large collections of documents. Integration of pgvector and pgai provides a strong solution.
 
 ### TODO
 
