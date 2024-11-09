@@ -23,7 +23,7 @@ Although initially the idea was to develop a semantic document search system, la
 ## Demo
 
 Because of problems with hosting Ollama along with the assistant app, only the semantic document search tool demo is hosted.
-- Thanks to Streamlit community cloud, [**visit the demo**](https://semantic-document-search.streamlit.app) ⭐
+- Thanks to Streamlit community cloud, [**visit the demo**](https://semantic-doc-search.streamlit.app) ⭐
 
 ![assistant](https://github.com/user-attachments/assets/c58ff3ae-b122-466b-a088-c9e31b80b60f)
 
