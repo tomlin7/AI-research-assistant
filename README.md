@@ -11,6 +11,7 @@ This is a semantic document search for smart document storage and retrieval usin
 - AI capabilities powered by [pgai](https://github.com/timescale/pgai)
 - User-friendly interface built with Streamlit
 - Document addition and indexing from GUI
+- Batch document processing (directly upload CSV files)
 - Rich metadata support for categorization
 - Simple table view and a detailed view for data
 - Scalable vector search using pgvector's IVFFlat indexing
