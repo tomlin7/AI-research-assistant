@@ -1,4 +1,4 @@
-# Semantic Document Search System with pgvector & [PGAI](https://github.com/timescale/pgai)
+# Semantic Document Search System with pgvector & [pgai](https://github.com/timescale/pgai)
 
 *This is a submission for the [Open Source AI Challenge with pgai and Ollama](https://dev.to/challenges/pgai)*
 
@@ -6,7 +6,7 @@
 
 This is a semantic document search for smart document storage and retrieval using natural language queries. You can use natural language to fetch data stored in the PostgreSQL database. It uses pgvector for vector similarity search, pgai through TimescaleDB for AI features.
 
-Key Features:
+**Key Features:**
 - Semantic search capability using document embeddings
 - AI capabilities powered by [pgai](https://github.com/timescale/pgai)
 - User-friendly interface built with Streamlit
@@ -16,6 +16,11 @@ Key Features:
 - Scalable vector search using pgvector's IVFFlat indexing
 
 In cases where you have to manage and search through large collections of documents based on meaning rather than just keywords, this tool is very helpful. Particularly useful for knowledge bases, content management systems, etc.
+
+### Demo
+Demo website hosted in Streamlit community cloud, [**visit here**](https://semantic-document-search.streamlit.app)
+
+![image](https://github.com/user-attachments/assets/3c07a5f8-954b-481a-8e03-ad47b99b3c8c)
 
 ### Features Showcase:
 
@@ -36,22 +41,20 @@ In cases where you have to manage and search through large collections of docume
    - Rich metadata display
    - Clean, intuitive interface
 
-## Tools Used
+### Tools Used
 
 #### PostgreSQL + pgvector + pgai + Streamlit
 - [TimescaleDB](https://www.timescale.com/) (PostgreSQL) for primary database (can be configured for self hosted psql as well)
 - [pgvector](https://github.com/pgvector/pgvector) for efficient vector similarity search
 - [pgai](https://github.com/timescale/pgai) through TimescaleDB for AI
 - [Streamlit](https://streamlit.io/) for the web interface
-- IVFFlat index for optimized search 
-- JSONB data type for flexible metadata storage
 
-#### Key Technologies
+### Key Technologies
 1. **Database Layer**
-   - TimescaleDB (PostgreSQL 15+)
    - pgvector extension for vector operations
-   - pgai extension for AI capabilities
+   - pgai extension for AI features
    - IVFFlat indexing for efficient similarity search
+   - JSONB data type for flexible metadata storage
 
 2. **Machine Learning**
    - [Sentence-Transformers](https://github.com/UKPLab/sentence-transformers) (`all-MiniLM-L6-v2 model`)
@@ -134,7 +137,8 @@ In cases where you have to manage and search through large collections of docume
 
 This project is about integrating AI vector search features with traditional databases (which are hard to get used to). This is a very helpful tool for content management systems where you need to manage and search through large collections of documents. Integration of pgvector and pgai provides a great solution along with Streamlit for simple and user-friendly interfaces.
 
-Enhancements possible like...
+### TODO
+
 - Better visualization of results using charts and stuff
 - Batch document processing (import CSV)
 - Delete, update documents functionality
