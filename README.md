@@ -20,7 +20,7 @@ In cases where you have to manage and search through large collections of docume
 ### Demo
 Demo website hosted in Streamlit community cloud, [**visit here**](https://semantic-document-search.streamlit.app)
 
-![image](https://github.com/user-attachments/assets/3c07a5f8-954b-481a-8e03-ad47b99b3c8c)
+![image](https://github.com/user-attachments/assets/ecad7f26-ac7c-4aff-8a2e-d6ad44ba406a)
 
 ### Features Showcase:
 
@@ -139,8 +139,8 @@ This project is about integrating AI vector search features with traditional dat
 
 ### TODO
 
-- Better visualization of results using charts and stuff
-- Batch document processing (import CSV)
-- Delete, update documents functionality
-- Filtering based on metadata as well
-- More use cases of pgai
+- [ ] Better visualization of results using charts and stuff
+- [x] Batch document processing (import CSV)
+- [ ] Delete, update documents functionality
+- [ ] Filtering based on metadata as well
+- [ ] More use cases of pgai
