@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "semantic-search"
+version = "0.1.10"
+description = "Semantic document search using PGAI"
+authors = ["billy <billydevbusiness@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+sentence-transformers = "^3.2.1"
+pgvector = "^0.3.6"
+psycopg2-binary = "^2.9.10"
+streamlit = "^1.40.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
