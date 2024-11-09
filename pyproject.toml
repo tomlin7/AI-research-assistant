@@ -13,6 +13,7 @@ pgvector = "^0.3.6"
 psycopg2-binary = "^2.9.10"
 streamlit = "^1.40.0"
 python-dotenv = "^1.0.1"
+pandas = "^2.2.3"
 
 [build-system]
 requires = ["poetry-core"]
