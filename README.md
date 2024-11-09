@@ -73,6 +73,12 @@ Because of problems with hosting Ollama along with the assistant app, only the s
    ```bash
    PSQL_URL=postgres://username:password@hostname:port/dbname?sslmode=require
    ```
+3. Install Ollama and any model (make sure its added to script) for assistant
+   ```
+   curl -fsSL https://ollama.com/install.sh | sh
+   ollama pull mistral
+   ollama serve
+   ```
 3. **Install Requirements**
    ```bash
    pip install -r requirements.txt
